@@ -55,7 +55,7 @@ func Main() {
 func start(_ context.Context, cmd *cli.Command) error {
 	// Only print the version if the flag is set
 	if cmd.IsSet(versionFlag.Name) {
-		log.Infof("mev-boost %s\n", config.Version)
+		fmt.Printf("mev-boost %s\n", config.Version) //nolint
 		return nil
 	}
 
